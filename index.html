@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial">
+         <title> SPORTS CENTER </title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1> SPORTS CENTER </h1>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="Home.html"> Home</a></li>
+                    <li> <a href="Sports.html"> Sports</a></li>
+                    <li> <a href="Watch.html"> Watch</a></li>
+                </ul>
+                </nav>
+                <section class="fade-in-section">
+                <div class="items">
+                    <div class="item">
+                        <h2>NBA</h2>
+                        <img src="2023-02-14T034139Z_1377388995_MT1USATODAY19991152_RTRMADP_3_NBA-DENVER-NUGGETS-AT-MIAMI-HEAT-scaled.jpg">
+                        <p> The 2023 NBA Finals between the Miami Heat and the Denver Nuggets are set to tip off on Friday, June 2 (Manila Time) at ball Arena in Denver, Colorado.</p>
+                    </div>  
+                 
+                     <div class="item">
+                        <h2>BOXING</h2>
+                        <img src="368498748_816842586854087_597926461355111956_n.jpg">
+                        
+                        <p>Manny Pacquio has an amateur record of 60-4 and a record of 62-8-2 as a professional, with 39 wins by knockout. Boxing historian Bert Sugar ranked Pacquio as the greates southpaw fighter of all time.</p>
+                    </div>         
+                
+                      <div class="item">
+                        <h2>UFC</h2>
+                        <img src="404129042_1570698373465285_1842326829940740304_n.jpg">
+                        <p>Conor McGregor enters UFC 264 facing Dustin Piorier in a trilogy, the first trilogy fight of McGregor's ecareer. Its also the most crucial fight of McGregor's career. Many have already pointed out the negative implications for McGregor if he for McGregor could also be bad for the UFC, and for MMA as whole.</p>
+            </div>
+            </div>
+                </section>
+
+                <section class="fade-in-section">
+                <div class="items">
+                    <div class="item">
+                        <h2>BILLIARDS</h2>
+                        <img src="gege.jpg">
+                        <p>Efren Reyes will go down as the greatest of all time and "The Magician" has career earnings to back that up. Over the course of his career, he has racked up earnings of around $2m. This comes from different deals, exhibitions and tournament wins.</p>
+                    </div>  
+                 
+                     <div class="item">
+                        <h2>WEIGHT LIFTING</h2>
+                        <img src="hidilyn.jpg">
+                        <p> Hidilyn understood this well and was patient. Even at a young age, she knew she wanted to compete, and so every effort, every triumph and defeat were directed towards getting better and getting closer to that goal—even if it seemed too big and too far. And she did it!</p>
+                    </div>         
+                
+                      <div class="item">
+                        <h2>GYMNASTICS</h2>
+                        <img src="Yulo.jpg">
+                        <p> Carlos Edriel Poquiz Yulo is a Filipino artistic gymnast who has won multiple medals at the World Artistic Gymnastics Championships.</p>
+            </div>
+        </div>
+                </section>
+    
+                <footer>
+                    <p>&copy; 2024 Sports Center. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="twitter.png"></a>
+                        <a href="https://www.youtube.com/" target="_blank"><img src="youtube.png"></a>
+                      </div>
+                  </footer>
+
+    </body>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInSection = document.querySelectorAll('.fade-in-section');
+        
+            function fadeInOnScroll() {
+                fadeInSection.forEach((section, index) => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const sectionBottom = section.getBoundingClientRect().bottom;
+                    const windowHeight = window.innerHeight;
+        
+                    if (sectionTop < windowHeight / 1.5 && sectionBottom >= 0) {
+                        section.style.opacity = 1;
+                        section.style.transform = 'translateY(0)';
+                    } else {
+                        section.style.opacity = 0;
+                        section.style.transform = 'translateY(20px)';
+                    }
+                    
+                    if (index === 0 && sectionBottom <= 0) {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                    }
+
+                });
+            }
+        
+            window.addEventListener('scroll', fadeInOnScroll);
+        
+            fadeInOnScroll();
+        });
+            </script>
+
+</html>
